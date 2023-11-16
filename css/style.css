@@ -1257,6 +1257,10 @@ h6 {
     padding-top: 1.875rem;
   }
 
+  .main-page {
+    padding-top: 13.125rem;
+  }
+
   .content-main__logo:not(:last-child) {
     margin-bottom: 1.25rem;
   }
@@ -1460,10 +1464,6 @@ h6 {
 
   .header__button {
     padding: 0.9375rem 0.9375rem;
-  }
-
-  .page__main {
-    padding-top: 12.5rem;
   }
 }
 
@@ -1970,6 +1970,20 @@ h6 {
 @supports not (margin-bottom: clamp( 0.9375rem , -8.8747866894rem  +  13.6518771331vw , 3.4375rem )) {
     .column-main-footer__title:not(:last-child) {
       margin-bottom: calc(0.9375rem + 2.5 * (100vw - 71.875rem) / 18.3125);
+    }
+}
+}
+
+@media (min-width: 20em) and (max-width: 40.625em) {
+@supports (padding-top: clamp( 12.5rem , 13.7310606061rem  +  -3.0303030303vw , 13.125rem )) {
+    .main-page {
+      padding-top: clamp( 12.5rem , 13.7310606061rem  +  -3.0303030303vw , 13.125rem );
+    }
+}
+
+@supports not (padding-top: clamp( 12.5rem , 13.7310606061rem  +  -3.0303030303vw , 13.125rem )) {
+    .main-page {
+      padding-top: calc(13.125rem + -0.625 * (100vw - 20rem) / 20.625);
     }
 }
 }
